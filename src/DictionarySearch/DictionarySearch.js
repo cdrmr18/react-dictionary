@@ -1,9 +1,16 @@
 import React, { useState } from "react"   
+import axios from "axios";
 import "./DictionarySearch.css";
+
 
 export default function DictionarySearch() {
     // setting and resetting input value
     let [inputValue, setInputValue] = useState("");
+
+    // result of axios dictionary search request to get word meanings
+    const handleResponse = (response) => {
+        console.log(response.data);
+    }
 
     // setting and resetting input value from search bar on each change that is made
     const handleSearchInputValueChange = (e) => {
@@ -13,7 +20,15 @@ export default function DictionarySearch() {
     // using current input value to search dictionary api for word meaning
     const searchDictionary = (e) => {
         e.preventDefault();
-        alert(`Searching for definition of ${inputValue}`);
+        // documentation of api: https://dictionaryapi.dev/
+        let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${inputValue}`;
+
+        axios.get(apiUrl)
+        .then(handleResponse)
+        .catch(function (error) {
+            // handle error
+            console.log(error);
+        })
     }
 
     return (
