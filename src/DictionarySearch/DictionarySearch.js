@@ -9,7 +9,9 @@ export default function DictionarySearch() {
 
     // result of axios dictionary search request to get word meanings
     const handleResponse = (response) => {
-        console.log(response.data);
+       let meaning = response.data[0].meanings[0].definitions[0].definition;
+
+       console.log(meaning);
     }
 
     // setting and resetting input value from search bar on each change that is made
