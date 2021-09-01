@@ -3,17 +3,16 @@ import axios from "axios";
 import "./DictionarySearch.css";
 
 
-export default function DictionarySearch() {
+export default function DictionarySearch(props) {
     // setting and resetting input value
     let [inputValue, setInputValue] = useState("");
 
     // result of axios dictionary search request to get word meanings
     const handleResponse = (response) => {
-       let meaning = response.data[0].meanings[0].definitions[0].definition;
-
-       console.log(meaning);
+    //    let meaning = response.data[0].meanings[0].definitions[0].definition;
+       props.searchResults(response);
     }
-
+    
     // setting and resetting input value from search bar on each change that is made
     const handleSearchInputValueChange = (e) => {
         setInputValue(e.target.value)

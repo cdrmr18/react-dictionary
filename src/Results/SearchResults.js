@@ -1,15 +1,13 @@
-import React, { useState } from "react"
+import React from "react"
 
-export default function SearchResults() {
-let [result, setResult] = useState("");
+export default function SearchResults(props) {
+    // console.log(props.searchResult);
+    let meaning = props.searchResult.data[0].meanings[0].definitions[0].definition;
 
-const retrieveSearchResults = (result) => {
-    setResult(result);
-}
     return (
         <div>
             <p>
-                {result}
+                {meaning}
             </p>
         </div>
     )
