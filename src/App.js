@@ -8,7 +8,6 @@ export default function App() {
 
   const retrieveSearchResults = (result) => {
       setResult(result);
-      // console.log(result.data);
   }
 
   return (
@@ -18,8 +17,8 @@ export default function App() {
         Dictionary App
         </header>
         <main> 
-          <DictionarySearch searchResults={retrieveSearchResults} />
-          <SearchResults searchResult={result} />
+          <DictionarySearch getSearchResults={retrieveSearchResults} />
+          <SearchResults resultData={result} />
         </main>
         <footer className="text-center">
         Coded by Kathy Tavia | <a href="https://github.com/cdrmr18">My Github</a>

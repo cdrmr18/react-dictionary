@@ -1,8 +1,8 @@
 import React from "react"
 
 export default function SearchResults(props) {
-    // console.log(props.searchResult);
-    let meaning = props.searchResult.data[0].meanings[0].definitions[0].definition;
+    // console.log(props.resultData);
+    let meaning = props.resultData.data[0].meanings[0].definitions[0].definition;
 
     return (
         <div>
