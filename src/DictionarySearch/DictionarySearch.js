@@ -9,8 +9,7 @@ export default function DictionarySearch(props) {
 
     // result of axios dictionary search request to get word meanings
     const handleResponse = (response) => {
-    //    let meaning = response.data[0].meanings[0].definitions[0].definition;
-       props.getSearchResults(response);
+         props.getSearchResults(response);
     }
     
     // setting and resetting input value from search bar on each change that is made
@@ -21,15 +20,25 @@ export default function DictionarySearch(props) {
     // using current input value to search dictionary api for word meaning
     const searchDictionary = (e) => {
         e.preventDefault();
-        // documentation of api: https://dictionaryapi.dev/
-        let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${inputValue}`;
 
-        axios.get(apiUrl)
-        .then(handleResponse)
-        .catch(function (error) {
-            // handle error
-            console.log(error);
-        })
+        const isEmpty = (str ) => {
+            //checking for an empty input value entered by user
+            return str.trim().length < 1;
+        }
+
+        if (isEmpty(inputValue)) {
+            alert('empty search')
+        }  else {
+           //documentation of api: https://dictionaryapi.dev/
+            let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${inputValue}`;
+
+            axios.get(apiUrl)
+            .then(handleResponse)
+            .catch(function (error) {
+                // handle error
+                console.log(error);
+            })
+        }
     }
 
     return (

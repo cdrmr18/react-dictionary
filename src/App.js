@@ -6,7 +6,7 @@ import SearchResults from './Results/SearchResults';
 export default function App() {
   let [result, setResult] = useState("");
 
-  const retrieveSearchResults = (result) => {
+  const retrieveSearchResults = (result) => { 
       setResult(result);
   }
 
@@ -21,8 +21,8 @@ export default function App() {
           <SearchResults resultData={result} />
         </main>
         <footer className="text-center">
-        Coded by Kathy Tavia | <a href="https://github.com/cdrmr18">My Github</a>
-      </footer>
+          Coded by Kathy Tavia | <a href="https://github.com/cdrmr18">My Github</a>
+        </footer>
       </div>
     </div>
   );
