@@ -9,6 +9,23 @@ export default function DictionarySearch(props) {
 
     // result of axios dictionary search request to get word meanings
     const handleResponse = (response) => {
+        console.log(response.data[0].word);
+
+        // let word = response.data[0].word;
+        // let meaning = props.resultData.data[0].meanings[0].definitions[0].definition;
+        // let phonetic = props.resultData.data[0].meanings[0].definitions[0].definition;
+        // let audio = props.resultData.data[0].meanings[0].definitions[0].definition;
+        // let origin = props.resultData.data[0].meanings[0].definitions[0].definition;
+        // let partOfSpeech = props.resultData.data[0].meanings[0].definitions[0].definition;
+        // let definition = props.resultData.data[0].meanings[0].definitions[0].definition;
+        // let example = props.resultData.data[0].meanings[0].definitions[0].definition;
+        // let synonyms = props.resultData.data[0].meanings[0].definitions[0].definition;
+        // let antonyms = props.resultData.data[0].meanings[0].definitions[0].definition;
+
+        // const result = {
+
+        // }
+
          props.getSearchResults(response);
     }
     
