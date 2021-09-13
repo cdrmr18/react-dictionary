@@ -55,10 +55,12 @@ export default function DictionarySearch(props) {
     }
 
     return (
-        <div className="dictionary-search text-center">
+        <div className="dictionary-search">
+            <h1>Dictionary App</h1>
+            <h2>What word do you want to look up?</h2>
             <form onSubmit={searchDictionary} className="form-inline">
                 <div className="form-row align-items-center">
-                    <div className="col-8">
+                    <div className="search-input col-8">
                         <input type="search" className="form-control" placeholder="Search..." onChange={handleSearchInputValueChange}>
                         </input>    
                     </div>    

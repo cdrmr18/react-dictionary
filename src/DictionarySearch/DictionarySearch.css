@@ -3,7 +3,7 @@
   justify-content: center;
 }
 
-input.form-control {
+input.form-control .search-input {
   width: auto;
 }
 .search-side {
