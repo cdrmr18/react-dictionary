@@ -9,8 +9,6 @@ export default function DictionarySearch(props) {
 
     // result of axios dictionary search request to get word meanings
     const handleResponse = (response) => {
-        console.log(response.data[0].meanings[0].definitions[0].antonyms);
-
         const result = {
             word: response.data[0].word,
             meaning: response.data[0].meanings[0].definitions[0].definition,

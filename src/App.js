@@ -18,7 +18,7 @@ export default function App() {
         </header>
         <main> 
           <DictionarySearch getSearchResults={retrieveSearchResults} />
-          <SearchResults resultData={result} />
+          <SearchResults {...result} />
         </main>
         <footer className="text-center">
           Coded by Kathy Tavia | <a href="https://github.com/cdrmr18">My Github</a>
