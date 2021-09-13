@@ -57,9 +57,14 @@ export default function DictionarySearch(props) {
 
     return (
         <div className="dictionary-search text-center">
-            <form onSubmit={searchDictionary}>
-                <input type="search" onChange={handleSearchInputValueChange}>
-                </input>
+            <form onSubmit={searchDictionary} class="form-inline">
+                <div className="form-row align-items-center">
+                    <div className="col-8">
+                        <input type="search" class="form-control" placeholder="Search..." onChange={handleSearchInputValueChange}>
+                        </input>    
+                    </div>    
+                    <button type="submit" className="btn btn-primary ms-1"><i class="fas fa-search"></i></button>         
+                </div>
             </form>
         </div>
     )

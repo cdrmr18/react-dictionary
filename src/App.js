@@ -13,17 +13,20 @@ export default function App() {
   return (
     <div className="App">
       <div className="container text-center">
-        <header className="App-header text-center">
-        Dictionary App
-        </header>
-        <main> 
-          
-          <DictionarySearch getSearchResults={retrieveSearchResults} />
-          <SearchResults {...result} />
-        </main>
-        <footer className="text-center">
-          Coded by Kathy Tavia | <a href="https://github.com/cdrmr18">My Github</a>
-        </footer>
+        <div className="row text-center">
+          <div className="col-sm-12 col-md-6">
+            <h1>Dictionary App</h1>
+            <h2>What word do you want to look up?</h2>
+            <DictionarySearch getSearchResults={retrieveSearchResults} />
+            <footer className="text-center">
+              <p>Coded by Kathy Tavia | <a href="https://github.com/cdrmr18">My Github</a></p>
+            </footer>
+          </div>
+
+          <div className="col-sm-12 col-md-6">
+            <SearchResults {...result} />
+          </div>  
+        </div> 
       </div>
     </div>
   );
