@@ -9,24 +9,22 @@ export default function DictionarySearch(props) {
 
     // result of axios dictionary search request to get word meanings
     const handleResponse = (response) => {
-        console.log(response.data[0].phonetic);
-
-        // let audio = props.resultData.data[0].meanings[0].definitions[0].definition;
-        // let origin = props.resultData.data[0].meanings[0].definitions[0].definition;
-        // let partOfSpeech = props.resultData.data[0].meanings[0].definitions[0].definition;
-        // let definition = props.resultData.data[0].meanings[0].definitions[0].definition;
-        // let example = props.resultData.data[0].meanings[0].definitions[0].definition;
-        // let synonyms = props.resultData.data[0].meanings[0].definitions[0].definition;
-        // let antonyms = props.resultData.data[0].meanings[0].definitions[0].definition;
+        console.log(response.data[0].meanings[0].definitions[0].antonyms);
 
         const result = {
             word: response.data[0].word,
             meaning: response.data[0].meanings[0].definitions[0].definition,
             phonetic: response.data[0].phonetic,
-
+            audio: response.data[0].phonetics[0].audio,
+            origin: response.data[0].origin,
+            partOfSpeech: response.data[0].meanings[0].partOfSpeech,
+            definition: response.data[0].meanings[0].definitions[0].definition,
+            example: response.data[0].meanings[0].definitions[0].example,
+            synonyms: response.data[0].meanings[0].definitions[0].synonyms,
+            antonyms: response.data[0].meanings[0].definitions[0].antonyms,
         }
 
-        // props.getSearchResults(result);
+        props.getSearchResults(result);
     }
     
     // setting and resetting input value from search bar on each change that is made
