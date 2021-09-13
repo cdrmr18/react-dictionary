@@ -12,9 +12,9 @@ export default function App() {
 
   return (
     <div className="App">
-      <div className="container text-center">
-        <div className="row text-center">
-          <div className="col-sm-12 col-md-6">
+      <div className="container">
+        <div className="row main">
+          <div className="search-side col-sm-12 col-md-6 text-center">
             <h1>Dictionary App</h1>
             <h2>What word do you want to look up?</h2>
             <DictionarySearch getSearchResults={retrieveSearchResults} />
@@ -23,7 +23,7 @@ export default function App() {
             </footer>
           </div>
 
-          <div className="col-sm-12 col-md-6">
+          <div className="search-results col-sm-12 col-md-6">
             <SearchResults {...result} />
           </div>  
         </div> 

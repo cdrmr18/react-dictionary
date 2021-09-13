@@ -11,7 +11,6 @@ export default function DictionarySearch(props) {
     const handleResponse = (response) => {
         const result = {
             word: response.data[0].word,
-            meaning: response.data[0].meanings[0].definitions[0].definition,
             phonetic: response.data[0].phonetic,
             audio: response.data[0].phonetics[0].audio,
             origin: response.data[0].origin,
@@ -57,13 +56,13 @@ export default function DictionarySearch(props) {
 
     return (
         <div className="dictionary-search text-center">
-            <form onSubmit={searchDictionary} class="form-inline">
+            <form onSubmit={searchDictionary} className="form-inline">
                 <div className="form-row align-items-center">
                     <div className="col-8">
-                        <input type="search" class="form-control" placeholder="Search..." onChange={handleSearchInputValueChange}>
+                        <input type="search" className="form-control" placeholder="Search..." onChange={handleSearchInputValueChange}>
                         </input>    
                     </div>    
-                    <button type="submit" className="btn btn-primary ms-1"><i class="fas fa-search"></i></button>         
+                    <button type="submit" className="btn btn-primary ms-1"><i className="fas fa-search"></i></button>         
                 </div>
             </form>
         </div>

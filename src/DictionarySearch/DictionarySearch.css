@@ -1,5 +1,11 @@
 .form-row {
   display: flex;
   justify-content: center;
-  /* max-width: 80%; */
+}
+
+input.form-control {
+  width: auto;
+}
+.search-side {
+  background: gray;
 }
