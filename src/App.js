@@ -17,6 +17,7 @@ export default function App() {
         Dictionary App
         </header>
         <main> 
+          
           <DictionarySearch getSearchResults={retrieveSearchResults} />
           <SearchResults {...result} />
         </main>
