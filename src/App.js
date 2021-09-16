@@ -19,7 +19,7 @@ export default function App() {
             <Footer />
           </div>
 
-          <div className="search-results col-sm-12 col-md-6 p-4">
+          <div className="search-results col-sm-12 col-md-6">
             <SearchResults {...result} />
           </div>  
         </div> 

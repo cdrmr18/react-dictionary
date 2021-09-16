@@ -4,8 +4,12 @@
 }
 
 input.form-control .search-input {
-  width: auto;
+  width: auto !important;
 }
 .search-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
   background: gray;
 }
